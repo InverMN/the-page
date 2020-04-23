@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formularz</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+	<script
+		src="https://code.jquery.com/jquery-3.5.0.min.js"
+		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	crossorigin="anonymous"></script>
+	<script src="addons.js"></script>
+</head>
+<body>
+	<main>
+		<h1>Napisz Wiadomość</h1>
+		<form action="register.php" method="post" autocomplete="off">
+			<label for="name">Imię</label>
+			<input type="text" name="name" id="name" required title="Podaj swoje imię">
+			<label for="surname">Nazwisko</label>
+			<input type="text" name="surname" id="surname" required title="Podaj swoje nazwisko">
+			<label for="email">E-mail</label>
+			<input type="email" name="email" id="email" required title="Podaj swój e-mail">
+			<label for="text">Treść</label>
+			<textarea name="text" id="text" cols="30" rows="10" required title="Tutaj napisz wiadomość"></textarea>
+			<input type="file" name="files" id="files" title="Możesz także dołączyć dodatkowe pliki">
+			<label for="files"><i class="fas fa-upload"></i> Dołącz pliki...</label>
+			<div>
+				<input type="checkbox" name="terms" id="terms" required title="Musisz zaakceptować nasze regulaminy usługi">
+				<label for="terms">Akceptuję <a href="https://pl.pornhub.com/information#terms">warunki użytkowania</a></label>
+			</div>
+			<input type="submit" value="Wyślij" title="Gdy wiadomość jest już gotowa możesz ja wysłać">
+		</form>
+	</main>
+	<script>
+	$(function() {
+		$(document).tooltip();
+	})
+</script>
+</body>
+</html>
